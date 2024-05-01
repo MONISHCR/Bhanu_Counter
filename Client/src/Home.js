@@ -11,8 +11,8 @@ const Home = () => {
   useEffect(() => {
     const fetchCounters = async () => {
       try {
-        const mainCounterResponse = await axios.get('http://localhost:5000/api/counter');
-        const myCounterResponse = await axios.get('http://localhost:5000/api/mycounter');
+        const mainCounterResponse = await axios.get('https://counter-monish-cutie.onrender.com/api/counter');
+        const myCounterResponse = await axios.get('https://counter-monish-cutie.onrender.com/api/mycounter');
         // Dispatch the counter values to update the state
         dispatch({ type: 'SET_MAIN', count: mainCounterResponse.data.count });
         dispatch({ type: 'SET_MY', count: myCounterResponse.data.count });
