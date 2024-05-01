@@ -13,7 +13,7 @@ const Counter = () => {
   useEffect(() => {
     const fetchCounter = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/counter');
+        const response = await axios.get('https://counter-monish-cutie.onrender.com/api/counter');
         dispatch({ type: 'SET_MAIN', count: response.data.count });
       } catch (err) {
         console.error(err);
@@ -22,7 +22,7 @@ const Counter = () => {
 
     const fetchMyCounter = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/mycounter');
+        const response = await axios.get('https://counter-monish-cutie.onrender.com/api/mycounter');
         setMyCounter(response.data.count); // Set MyCounter count
       } catch (err) {
         console.error(err);
@@ -35,7 +35,7 @@ const Counter = () => {
 
   const incrementMainCounter = useCallback(async () => {
     try {
-      await axios.post('http://localhost:5000/api/counter/increment');
+      await axios.post('https://counter-monish-cutie.onrender.com/api/counter/increment');
       dispatch({ type: 'INCREMENT_MAIN' });
     } catch (err) {
       console.error(err);
@@ -44,7 +44,7 @@ const Counter = () => {
 
   const decrementMainCounter = useCallback(async () => {
     try {
-      await axios.post('http://localhost:5000/api/counter/decrement');
+      await axios.post('https://counter-monish-cutie.onrender.com/api/counter/decrement');
       dispatch({ type: 'DECREMENT_MAIN' });
     } catch (err) {
       console.error(err);
