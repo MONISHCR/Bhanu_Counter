@@ -1,0 +1,85 @@
+use school;
+CREATE TABLE classes (
+    class_id INT AUTO_INCREMENT PRIMARY KEY,
+    class_name VARCHAR(255),
+    subject VARCHAR(255)
+);
+
+INSERT INTO classes (class_name, subject) VALUES
+('Class 1', 'Mathematics'),
+('Class 1', 'Science'),
+('Class 2', 'English'),
+('Class 2', 'History');
+
+INSERT INTO classes (class_name, subject) VALUES
+('Class 1', 'Mathematics'),
+('Class 1', 'Science'),
+('Class 2', 'English'),
+('Class 2', 'History');
+drop table classes;
+select * from classes;
+use school;
+CREATE TABLE timetable (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    class_name VARCHAR(255) NOT NULL,
+    monday VARCHAR(255),
+    tuesday VARCHAR(255),
+    wednesday VARCHAR(255),
+    thursday VARCHAR(255),
+    friday VARCHAR(255),
+    saturday VARCHAR(255),
+    CONSTRAINT unique_class_day UNIQUE (class_name(50), monday(50), tuesday(50), wednesday(50), thursday(50), friday(50), saturday(50))
+);
+-- Insert subjects into the timetable table for Class 1
+INSERT INTO timetable (class_name, monday, tuesday, wednesday, thursday, friday, saturday)
+VALUES 
+    ('Class 1', 'Telugu', 'English', 'Maths', 'Science', 'Social', 'Hindi'),
+    ('Class 2', 'Hindi', 'Social', 'Telugu', 'English', 'Maths', 'Science'),
+    ('Class 3', 'Science', 'Telugu', 'Hindi', 'Maths', 'English', 'Social'),
+    ('Class 4', 'Maths', 'Science', 'Social', 'Telugu', 'Hindi', 'English'),
+    ('Class 5', 'English', 'Maths', 'Science', 'Social', 'Telugu', 'Hindi'),
+    ('Class 6', 'Social', 'Hindi', 'English', 'Maths', 'Science', 'Telugu');
+select * from timetable;
+CREATE TABLE classes (
+    class_name VARCHAR(255),
+    subject VARCHAR(255)
+);
+
+-- Insert sample data into the classes table
+INSERT INTO classes (class_name, subject) VALUES 
+('Class 1', 'Telugu'),
+('Class 1', 'English'),
+('Class 1', 'Maths'),
+('Class 1', 'Science'),
+('Class 1', 'Social'),
+('Class 1', 'Hindi'),
+('Class 2', 'Hindi'),
+('Class 2', 'Social'),
+('Class 2', 'Telugu'),
+('Class 2', 'English'),
+('Class 2', 'Maths'),
+('Class 2', 'Science'),
+('Class 3', 'Science'),
+('Class 3', 'Telugu'),
+('Class 3', 'Hindi'),
+('Class 3', 'Maths'),
+('Class 3', 'English'),
+('Class 3', 'Social'),
+('Class 4', 'Maths'),
+('Class 4', 'Science'),
+('Class 4', 'Social'),
+('Class 4', 'Telugu'),
+('Class 4', 'Hindi'),
+('Class 4', 'English'),
+('Class 5', 'English'),
+('Class 5', 'Maths'),
+('Class 5', 'Science'),
+('Class 5', 'Social'),
+('Class 5', 'Telugu'),
+('Class 5', 'Hindi'),
+('Class 6', 'Social'),
+('Class 6', 'Hindi'),
+('Class 6', 'English'),
+('Class 6', 'Maths'),
+('Class 6', 'Science'),
+('Class 6', 'Telugu');
