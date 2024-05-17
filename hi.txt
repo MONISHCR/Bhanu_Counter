@@ -83,3 +83,9 @@ INSERT INTO classes (class_name, subject) VALUES
 ('Class 6', 'Maths'),
 ('Class 6', 'Science'),
 ('Class 6', 'Telugu');
+
+
+
+*****IMPORTAMT
+
+gateway4u@gmail.com 
